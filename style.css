@@ -1,0 +1,6 @@
+@import url('./css/main.css');
+@import url('./css/aside.css');
+:root {
+    --primary-gray: #e0e0e0;
+    --primary-white: #ffffff;
+  }

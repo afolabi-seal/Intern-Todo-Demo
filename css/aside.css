@@ -1,0 +1,143 @@
+.side-nav {
+  background-color: var(--primary-white);
+  height: 100%;
+  padding: 1.4rem 0.8rem;
+  border-radius: 0.8rem;
+  flex-basis: 36rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  position: relative;
+}
+
+.side-nav__toggle {
+  position: absolute;
+  right: -1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 100%;
+  background-color: var(--primary-white);
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.private-title,
+.group-title {
+  font-size: 2.4rem;
+}
+
+.private,
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.private > button,
+.group > button {
+  border-radius: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .8rem;
+  background-color: var(--primary-gray);
+}
+
+
+.private > button span,
+.group > button span, 
+.private > button div,
+.group > button div {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+
+.private > button span i,
+.group > button span i {
+    font-size: 2.4rem;
+}
+
+.private > button div,
+.group > button div{
+    display: flex;
+    gap: 1rem;
+}
+
+.private > button div i,
+.private > button div span,
+.group > button div i,
+.group > button div span{
+    padding: .8rem;
+    border-radius: 100%;
+    border: .1rem solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.private-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.private-list__item {
+  width: 100%;
+}
+
+.private-list__item__button {
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.8rem;
+}
+
+.private-list__item__button span {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.private-list__item__button span i {
+  font-size: 2.4rem;
+}
+.private-list__item__button div {
+  background-color: var(--primary-gray);
+  border-radius: 100%;
+  padding: 0.4rem 0.8rem;
+}
+
+.private-list__item__button:hover {
+  background-color: var(--primary-gray);
+  transition: all 0.5s ease;
+}
+
+.private-list__item__button:hover div {
+  background-color: var(--primary-white);
+  transition: all 0.5s ease;
+}
+
+.group-project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .6rem;
+}
+
+.group-project__card{
+    flex-basis: 49%;
+}
+
+.group-project__card figure{
+    width: 100%;
+    min-height: 16rem;
+    border-radius: .8rem;
+    background-color: var(--primary-gray);
+    margin-bottom: .6rem;
+}
+
+.group-project__card article p{
+    color: var(--primary-gray);
+}

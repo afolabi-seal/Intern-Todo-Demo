@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main-view">
+        <!-- side nav -->
+      <aside class="side-nav">
+        <button class="side-nav__toggle">
+            <i class="ri-fullscreen-line"></i>
+        </button>
+        <!-- private section -->
+        <section class="private">
+          <h3 class="private-title">Private</h3>
+          <ul class="private-list">
+            <li class="private-list__item">
+              <button class="private-list__item__button">
+                <span>
+                  <i class="ri-home-7-fill"></i>
+                  <p>Home</p>
+                </span>
+                <div>8</div>
+              </button>
+            </li>
+
+            <li class="private-list__item">
+              <button class="private-list__item__button">
+                <span>
+                  <i class="ri-checkbox-circle-fill"></i>
+                  <p>Completed</p>
+                </span>
+                <div>16</div>
+              </button>
+            </li>
+
+            <li class="private-list__item">
+              <button class="private-list__item__button">
+                <span>
+                  <i class="ri-account-pin-box-fill"></i>
+                  <p>Personal</p>
+                </span>
+                <div>4</div>
+              </button>
+            </li>
+
+            <li class="private-list__item">
+              <button class="private-list__item__button">
+                <span>
+                  <i class="ri-printer-cloud-fill"></i>
+                  <p>Work</p>
+                </span>
+                <div>6</div>
+              </button>
+            </li>
+
+            <li class="private-list__item">
+              <button class="private-list__item__button">
+                <span>
+                    <i class="ri-restaurant-2-fill"></i>
+                  <p>Diet</p>
+                </span>
+                <div>6</div>
+              </button>
+            </li>
+
+            <li class="private-list__item">
+              <button class="private-list__item__button">
+                <span>
+                    <i class="ri-book-shelf-fill"></i>
+                  <p>List of book</p>
+                </span>
+                <div>6</div>
+              </button>
+            </li>
+          </ul>
+          <button>
+            <span>
+              <i class="ri-add-line"></i>
+              <p>Create new list</p>
+            </span>
+            <div>
+              <i class="ri-command-line"></i>
+              <span>L</span>
+            </div>
+          </button>
+        </section>
+        <!-- Group section -->
+        <section class="group">
+          <h3 class="group-title">Group</h3>
+
+          <div class="group-project">
+            <div class="group-project__card">
+              <figure></figure>
+              <article>
+                <h5>Mobal Project</h5>
+                <p>5 people</p>
+              </article>
+            </div>
+            <div class="group-project__card">
+              <figure></figure>
+              <article>
+                <h5>Futur Project</h5>
+                <p>4 people</p>
+              </article>
+            </div>
+          </div>
+
+          <button class="group-button">
+            <span>
+              <i class="ri-add-line"></i>
+              <p>Create new list</p>
+            </span>
+            <div>
+              <i class="ri-command-line"></i>
+              <span>G</span>
+            </div>
+          </button>
+        </section>
+      </aside>
+
+      <!-- main view -->
+      <section></section>
+    </main>
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
