@@ -11,11 +11,11 @@
     />
   </head>
   <body>
-    <main class="main-view">
-        <!-- side nav -->
+    <main class="main">
+      <!-- side nav -->
       <aside class="side-nav">
         <button class="side-nav__toggle">
-            <i class="ri-fullscreen-line"></i>
+          <i class="ri-fullscreen-line"></i>
         </button>
         <!-- private section -->
         <section class="private">
@@ -64,7 +64,7 @@
             <li class="private-list__item">
               <button class="private-list__item__button">
                 <span>
-                    <i class="ri-restaurant-2-fill"></i>
+                  <i class="ri-restaurant-2-fill"></i>
                   <p>Diet</p>
                 </span>
                 <div>6</div>
@@ -74,7 +74,7 @@
             <li class="private-list__item">
               <button class="private-list__item__button">
                 <span>
-                    <i class="ri-book-shelf-fill"></i>
+                  <i class="ri-book-shelf-fill"></i>
                   <p>List of book</p>
                 </span>
                 <div>6</div>
@@ -127,7 +127,127 @@
       </aside>
 
       <!-- main view -->
-      <section></section>
+      <section class="main-view">
+        <!-- Heading section -->
+        <header class="main-view-header">
+          <article class="main-view-header__text">
+            <h1>Good morning, Sulivan!</h1>
+            <p>Today, Wed 6 July 2024</p>
+          </article>
+          <div class="main-view-header__filter">
+            <span>
+              <button>
+                <i class="ri-arrow-down-s-line"></i>
+              </button>
+              <p>Today</p>
+            </span>
+            <div>
+              <i class="ri-menu-fold-line"></i>
+            </div>
+          </div>
+        </header>
+
+        <main class="main-view-main">
+          <!-- task list -->
+          <ul class="main-view-main-list">
+            <li class="main-view-main-list__item">
+              <div class="main-view-main-list__item__task__title">
+                <div>
+                  <span>
+                    <i class="ri-checkbox-fill"></i>
+                  </span>
+                  <input type="checkbox" name="" id="" />
+                </div>
+                <p>Read a book</p>
+              </div>
+              <div class="main-view-main-list__item__task__time">
+                <span>
+                  <i class="ri-filter-3-line"></i>
+                  <p>08.00 - 09.00</p>
+                </span>
+
+                <div>
+                  <i class="ri-more-2-fill"></i>
+                </div>
+              </div>
+            </li>
+
+            <li class="main-view-main-list__item">
+              <div class="main-view-main-list__item__task__title">
+                <div>
+                  <span>
+                    <i class="ri-checkbox-fill"></i>
+                  </span>
+                  <input type="checkbox" name="" id="" />
+                </div>
+                <p>Wireframing new product</p>
+              </div>
+              <div class="main-view-main-list__item__task__time">
+                <span>
+                  <i class="ri-filter-3-line"></i>
+                  <p>08.00 - 09.00</p>
+                </span>
+
+                <div>
+                  <i class="ri-more-2-fill"></i>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <section class="main-view-main-footer">
+            <!-- Create new task componeny -->
+            <div class="main-view-main-footer__create-task-section">
+              <form action="">
+                <section
+                  class="main-view-main-footer__create-task-section-form"
+                >
+                  <div class="">
+                    <div></div>
+                    <input type="text" placeholder="Create new task" />
+                  </div>
+                  <div>
+                    <span>date</span>
+                    <span>time</span>
+                  </div>
+                </section>
+
+                <section class="list-date-time">
+
+                  <button>
+                    <span>
+                      <i class="ri-checkbox-blank-line"></i>
+                      <p>No list</p>
+                    </span>
+                    <i class="ri-arrow-down-s-line"></i>
+                  </button>
+                  
+                  <div>
+                    <span>
+                      <i class="ri-calendar-fill"></i>
+                      <input type="date" />
+                    </span>
+                    <button>
+                      <i class="ri-time-fill"></i>
+                    </button>
+                  </div>
+                </section>
+              </form>
+            </div>
+            <!-- create new tas=k button -->
+            <button class="main-view-button">
+              <span>
+                <i class="ri-add-line"></i>
+                <p>Create new task</p>
+              </span>
+              <div>
+                <i class="ri-command-line"></i>
+                <span>N</span>
+              </div>
+            </button>
+          </section>
+        </main>
+      </section>
     </main>
     <script src="app.js" type="module"></script>
   </body>

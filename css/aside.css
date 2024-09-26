@@ -1,6 +1,6 @@
 .side-nav {
   background-color: var(--primary-white);
-  height: 100%;
+  /* height: 100%; */
   padding: 1.4rem 0.8rem;
   border-radius: 0.8rem;
   flex-basis: 36rem;
@@ -17,7 +17,7 @@
   height: 2.6rem;
   border-radius: 100%;
   background-color: var(--primary-white);
-  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0.6rem var(--primary-btn-hover);
 }
 
 .private-title,
@@ -40,6 +40,12 @@
   align-items: center;
   padding: .8rem;
   background-color: var(--primary-gray);
+}
+
+.private > button:hover,
+.group > button:hover {
+    background-color: #0000002c;
+    transition: all 0.5s ease;
 }
 
 
@@ -68,12 +74,20 @@
 .private > button div span,
 .group > button div i,
 .group > button div span{
-    padding: .8rem;
+    padding: .6rem;
     border-radius: 100%;
     border: .1rem solid rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.4);
 }
-
+.private > button div span,
+.group > button div span{
+    line-height: 1.4rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .private-list {
   width: 100%;
   display: flex;
