@@ -21,6 +21,11 @@ body {
   justify-content: center;
   background-color: #000;
 }
+@media screen and (min-width: 1920px) {
+  body {
+    height: 100svh;
+  }
+}
 
 a,
 a::before,
@@ -32,10 +37,9 @@ a::after {
 .main {
   background-color: var(--primary-gray);
   width: 100%;
-  height: 100%;
+  height: 100svh;
   max-width: 192rem;
-  min-height: 100rem;
-  max-height: 100rem;
+  max-height: 108rem;
   padding: 0.8rem;
   display: flex;
   border-radius: .8rem;
@@ -51,5 +55,10 @@ button {
 
 li {
   list-style: none;
+}
+
+.btn{
+  padding: 1.6rem .8rem;
+  border-radius: 4rem;
 }
 

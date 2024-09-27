@@ -20,64 +20,64 @@
         <!-- private section -->
         <section class="private">
           <h3 class="private-title">Private</h3>
-          <ul class="private-list">
+          <ul class="private-list" id="lists">
             <li class="private-list__item">
-              <button class="private-list__item__button">
+              <button class="private-list__item__button" id="home-btn">
                 <span>
                   <i class="ri-home-7-fill"></i>
                   <p>Home</p>
                 </span>
-                <div>8</div>
+                <div id="home-counter"></div>
               </button>
             </li>
 
             <li class="private-list__item">
-              <button class="private-list__item__button">
+              <button class="private-list__item__button" id="completed-btn">
                 <span>
                   <i class="ri-checkbox-circle-fill"></i>
                   <p>Completed</p>
                 </span>
-                <div>16</div>
+                <div id="completed-counter"></div>
               </button>
             </li>
 
             <li class="private-list__item">
-              <button class="private-list__item__button">
+              <button class="private-list__item__button" id="personal-btn">
                 <span>
                   <i class="ri-account-pin-box-fill"></i>
                   <p>Personal</p>
                 </span>
-                <div>4</div>
+                <div id="personal-counter"></div>
               </button>
             </li>
 
             <li class="private-list__item">
-              <button class="private-list__item__button">
+              <button class="private-list__item__button" id="work-btn">
                 <span>
                   <i class="ri-printer-cloud-fill"></i>
                   <p>Work</p>
                 </span>
-                <div>6</div>
+                <div id="work-counter"></div>
               </button>
             </li>
 
             <li class="private-list__item">
-              <button class="private-list__item__button">
+              <button class="private-list__item__button" id="diet-btn">
                 <span>
                   <i class="ri-restaurant-2-fill"></i>
                   <p>Diet</p>
                 </span>
-                <div>6</div>
+                <div id="diet-counter"></div>
               </button>
             </li>
 
             <li class="private-list__item">
-              <button class="private-list__item__button">
+              <button class="private-list__item__button" id="list-of-book-btn">
                 <span>
                   <i class="ri-book-shelf-fill"></i>
                   <p>List of book</p>
                 </span>
-                <div>6</div>
+                <div id="list-of-book-counter"></div>
               </button>
             </li>
           </ul>
@@ -149,8 +149,8 @@
 
         <main class="main-view-main">
           <!-- task list -->
-          <ul class="main-view-main-list">
-            <li class="main-view-main-list__item">
+          <ul class="main-view-main-list" id="task-list">
+            <!-- <li class="main-view-main-list__item">
               <div class="main-view-main-list__item__task__title">
                 <div>
                   <span>
@@ -192,7 +192,7 @@
                   <i class="ri-more-2-fill"></i>
                 </div>
               </div>
-            </li>
+            </li> -->
           </ul>
 
           <section class="main-view-main-footer">
@@ -232,6 +232,7 @@
                     </button>
                   </div>
                 </section>
+                <button class="main-view-main-footer-save-button btn">Save changes</button>
               </form>
             </div>
             <!-- create new tas=k button -->

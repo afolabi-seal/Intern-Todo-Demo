@@ -8,11 +8,14 @@
   flex-direction: column;
   gap: 1.4rem;
   position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .side-nav__toggle {
   position: absolute;
-  right: -1rem;
+  right: 1rem;
+  top: 1.6rem;
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 100%;
@@ -154,4 +157,12 @@
 
 .group-project__card article p{
     color: var(--primary-gray);
+}
+
+.private-list__item__button.active{
+  background-color: var(--primary-gray);
+}
+
+.private-list__item__button.active div{
+  background-color: var(--primary-white);
 }
