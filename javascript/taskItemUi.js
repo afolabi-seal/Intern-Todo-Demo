@@ -1,16 +1,43 @@
+import { allTaskList } from "./task.js";
 class RenderListItemUI {
-  constructor() {}
+  constructor() {
+    this.renderListItem;
+  }
+  setIsCompleted() {
+    const targetElement = document.querySelector(".main-view-main-list");
+    const listItemChildren = targetElement.children;
+    // console.log(listItemChildren)
+    Array.from(listItemChildren).forEach((item) => {
+      const checkbox = item.children[0].children[0].children[1];
+      const taskId = +checkbox.dataset.id;
+      checkbox.addEventListener("click", (e) => {
+        allTaskList.forEach((task) => {
+          if (task.id === taskId) {
+            const spanEl = checkbox.parentElement.children[0];
+            if (e.target.checked) {
+              const newUI = allTaskList.filter((allTsk) => allTsk.category === task.category);
+              // this.renderListItem(newUI)
+              task.isCompleted = true
+              spanEl.classList.remove("display-invisible");
+            }
+            // console.log(spanEl)
+            // spanEl.setAttribute("style", `display:${e.target.checkbox ? 'block' : 'none'} `)
+          }
+        });
+      });
+    });
+  }
   renderListItem(arg) {
     const listUi = document.querySelector("#task-list");
     let item = "";
-    for (let i = 0; i < arg.length; i++) {
+    for (let i = 0; i < arg.length ; i++) {
       item += ` <li class="main-view-main-list__item">
               <div class="main-view-main-list__item__task__title">
-                <div>
-                  <span>
-                    <i class="ri-checkbox-fill"></i>
-                  </span>
-                  <input type="checkbox" name="" id="" data-id=${arg[i].id}/>
+              <div>
+              <span class='display-invisible'>
+                 <i class='ri-checkbox-fill'></i>
+                    </span>
+                  <input type="checkbox" name="" id="" data-id=${arg[i].id} />
                 </div>
                 <p>${arg[i].taskItem}</p>
               </div>
@@ -33,4 +60,5 @@ class RenderListItemUI {
     }
   }
 }
-export const { renderListItem } = new RenderListItemUI();
+
+export const { renderListItem, setIsCompleted } = new RenderListItemUI();

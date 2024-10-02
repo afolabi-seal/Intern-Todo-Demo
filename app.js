@@ -10,9 +10,9 @@ import {
   getWorkTask,
   getDietTask,
   getListOfBookTasks,
-  allTaskList
+  allTaskList,
 } from "./javascript/task.js";
-import {renderListItem} from './javascript/taskItemUi.js'
+import { renderListItem, setIsCompleted } from "./javascript/taskItemUi.js";
 
 const homeUICounter = document.querySelector("#home-counter");
 const completedUICounter = document.querySelector("#completed-counter");
@@ -28,30 +28,45 @@ const workBtn = document.querySelector("#work-btn");
 const dietBtn = document.querySelector("#diet-btn");
 const listOfBooksBtn = document.querySelector("#list-of-book-btn");
 
-homeBtn.addEventListener("click",(e)=>{
-    // if(!homeBtn.classList.contains('active')){
-    //     homeBtn.classList.add('active');
-    // }
-    getHomeTask()
+homeBtn.addEventListener("click", (e) => {
+  // if(!homeBtn.classList.contains('active')){
+  //     homeBtn.classList.add('active');
+  // }
+  getHomeTask();
 });
-completedBtn.addEventListener("click",(e)=>{
-    // if(!completedBtn.classList.contains('active')){
-    //     completedBtn.classList.add('active');
-    // }
-    getCompletedTask()
+completedBtn.addEventListener("click", (e) => {
+  // if(!completedBtn.classList.contains('active')){
+  //     completedBtn.classList.add('active');
+  // }
+  getCompletedTask();
+  setIsCompleted();
+
 });
-personalBtn.addEventListener("click",getPersonalTask);
-workBtn.addEventListener("click",getWorkTask);
-dietBtn.addEventListener("click", getDietTask);
-listOfBooksBtn.addEventListener("click", getListOfBookTasks);
+personalBtn.addEventListener("click", () => {
+  getPersonalTask();
+  setIsCompleted();
+});
+workBtn.addEventListener("click", () => {
+  getWorkTask();
+  setIsCompleted();
+});
+
+dietBtn.addEventListener("click", ()=>{
+  getDietTask()
+  setIsCompleted()
+});
+listOfBooksBtn.addEventListener("click", ()=>{
+  getListOfBookTasks()
+  setIsCompleted()
+});
 // console.log(allTaskList)
-renderListItem(allTaskList)
+renderListItem(allTaskList);
 document.addEventListener("DOMContentLoaded", () => {
-    homeUICounter.setAttribute(
+  homeUICounter.setAttribute(
     "style",
     `display : ${allTaskList.length > 0 ? "block" : "none"}`
   );
-//   homeBtn.classList.add('active')
+  //   homeBtn.classList.add('active')
   completedUICounter.setAttribute(
     "style",
     `display : ${completed.length > 0 ? "block" : "none"}`
@@ -81,3 +96,5 @@ document.addEventListener("DOMContentLoaded", () => {
   listOfBooksUICounter.textContent =
     listOfBooks.length > 0 ? listOfBooks.length : 0;
 });
+
+setIsCompleted();

@@ -3,7 +3,7 @@ import { renderListItem } from "./taskItemUi.js";
 const taskList = [
   {
     id: 0,
-    category: "home",
+    category: "personal",
     taskItem: "go to the market",
     startTime: "00.00",
     endTime: "09.00",
@@ -12,16 +12,16 @@ const taskList = [
   },
   {
     id: 1,
-    category: "completed",
+    category: "list of books",
     taskItem: "Build a portfolio website",
     startTime: "21.00",
     endTime: "22.00",
     date: "2024-09-25",
-    isCompleted: true,
+    isCompleted: false,
   },
   {
     id: 3,
-    category: "personal",
+    category: "diet",
     taskItem: "Read a book about javascript",
     startTime: "18.00",
     endTime: "22.00",
@@ -30,7 +30,7 @@ const taskList = [
   },
   {
     id: 4,
-    category: "home",
+    category: "work",
     taskItem: "Clean the living room",
     startTime: "09.00",
     endTime: "14.00",
@@ -56,7 +56,16 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
+    id: 45,
+    category: "diet",
+    taskItem: "Be a good samaritan",
+    startTime: "00.00",
+    endTime: "09.00",
+    date: "2024-09-27",
+    isCompleted: false,
+  },
+  {
+    id: 56,
     category: "personal",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
@@ -65,7 +74,7 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
+    id: 57,
     category: "personal",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
@@ -74,7 +83,7 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
+    id: 68,
     category: "personal",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
@@ -83,8 +92,8 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
-    category: "personal",
+    id: 97,
+    category: "list of books",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
     endTime: "09.00",
@@ -92,8 +101,8 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
-    category: "personal",
+    id: 100,
+    category: "work",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
     endTime: "09.00",
@@ -101,8 +110,8 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
-    category: "personal",
+    id: 70,
+    category: "diet",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
     endTime: "09.00",
@@ -110,8 +119,8 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
-    category: "personal",
+    id: 71,
+    category: "work",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
     endTime: "09.00",
@@ -119,8 +128,8 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
-    category: "personal",
+    id: 72,
+    category: "list of books",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
     endTime: "09.00",
@@ -128,16 +137,7 @@ const taskList = [
     isCompleted: false,
   },
   {
-    id: 7,
-    category: "personal",
-    taskItem: "Be a good samaritan",
-    startTime: "00.00",
-    endTime: "09.00",
-    date: "2024-09-27",
-    isCompleted: false,
-  },
-  {
-    id: 7,
+    id: 73,
     category: "personal",
     taskItem: "Be a good samaritan",
     startTime: "00.00",
@@ -161,22 +161,22 @@ class TaskList {
   }
 
   getHomeTask() {
-    renderListItem(taskList);
+    renderListItem(taskList.filter(item => !item.isCompleted));
   }
   getCompletedTask() {
-    renderListItem(completed);
+    renderListItem(completed.filter(item => item.isCompleted));
   }
   getPersonalTask() {
-    renderListItem(personal);
+    renderListItem(personal.filter(item => !item.isCompleted));
   }
   getWorkTask() {
-    renderListItem(work);
+    renderListItem(work.filter(item => !item.isCompleted));
   }
   getListOfBookTasks() {
-    renderListItem(listOfBooks);
+    renderListItem(listOfBooks.filter(item => !item.isCompleted));
   }
   getDietTask() {
-    renderListItem(diet);
+    renderListItem(diet.filter(item => !item.isCompleted));
   }
 }
 
